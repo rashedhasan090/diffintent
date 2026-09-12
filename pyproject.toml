@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diffintent"
+version = "0.1.0"
+description = "Classify unified-diff hunks by intent (tests, docs, deps, config, ci, generated, code)."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Rashed Hasan" }]
+keywords = ["diff", "git", "code-review", "developer-tools", "llm", "agents", "cli"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+  "Topic :: Software Development :: Version Control",
+  "Intended Audience :: Developers",
+]
+dependencies = []
+
+[project.scripts]
+diffintent = "diffintent.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rashedhasan090/diffintent"
+Repository = "https://github.com/rashedhasan090/diffintent"
+
+[tool.setuptools.packages.find]
+where = ["src"]
